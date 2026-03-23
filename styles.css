@@ -1,0 +1,86 @@
+/* RESET & FONTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold-primary: #D4AF37;
+    --gold-dark: #B8860B;
+    --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F4EBD0 50%, #B8860B 100%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* NÚT BẤM GOLD SANG TRỌNG */
+.btn-primary {
+    background: var(--gold-gradient);
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.btn-primary:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
+/* NÚT NỔI (FLOATING) */
+.floating-btn {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-btn:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.floating-btn:active {
+    transform: scale(0.9);
+}
+
+/* INPUT FIELDS */
+.input-field {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #F3F4F6;
+    background-color: #F9FAFB;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    background-color: white;
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+}
+
+/* RESPONSIVE MAP */
+iframe {
+    filter: sepia(10%) contrast(105%);
+}
+
+/* POPUP ANIMATION */
+#main-popup {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
