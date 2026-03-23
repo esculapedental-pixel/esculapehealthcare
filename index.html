@@ -7,145 +7,86 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
-    <link rel="stylesheet" href="styles.css">
     <style>
         :root { --gold: #D4AF37; }
-        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .font-serif { font-family: 'Playfair Display', serif; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        .review-card { min-width: 300px; scroll-snap-align: start; }
-        .before-after-card { min-width: 280px; scroll-snap-align: start; }
+        .btn-gold { background: linear-gradient(135deg, #D4AF37 0%, #F4EBD0 50%, #B8860B 100%); }
     </style>
 </head>
-<body class="bg-slate-50">
+<body class="bg-white text-gray-900">
 
     <nav class="fixed top-0 left-0 right-0 z-[100] bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html"><img src="images/logo.png" class="h-10" alt="Logo"></a>
-            
+            <a href="#"><img src="images/logo.png" class="h-10" alt="Logo"></a>
             <div class="flex items-center gap-6">
-                <ul class="hidden lg:flex gap-8 text-xs font-bold tracking-widest text-gray-500 uppercase">
-                    <li><a href="#services" class="hover:text-amber-600">Services</a></li>
-                    <li><a href="#gallery" class="hover:text-amber-600">Gallery</a></li>
-                    <li><a href="blog.html" class="text-amber-600">Blog</a></li>
-                </ul>
-                
-                <div class="flex gap-2 bg-gray-100 p-1 rounded-full border border-gray-200">
-                    <button class="px-3 py-1 text-[10px] font-bold rounded-full bg-white shadow-sm">EN</button>
-                    <button class="px-3 py-1 text-[10px] font-bold text-gray-400">DE</button>
-                    <button class="px-3 py-1 text-[10px] font-bold text-gray-400">RU</button>
+                <div class="hidden md:flex gap-2 bg-gray-100 p-1 rounded-full text-[10px] font-bold">
+                    <button class="px-3 py-1 rounded-full bg-white shadow-sm">EN</button>
+                    <button class="px-3 py-1 text-gray-400">DE</button>
+                    <button class="px-3 py-1 text-gray-400">RU</button>
                 </div>
-                
-                <button onclick="openPopup()" class="btn-primary px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-white shadow-lg shadow-amber-200">Book Now</button>
+                <button onclick="openPopup()" class="btn-gold px-6 py-2.5 rounded-full text-xs font-bold uppercase text-white shadow-lg">Book Now</button>
             </div>
         </div>
     </nav>
 
-    <section id="services" class="pt-32 pb-20 px-6">
-        <div class="max-w-7xl mx-auto text-center mb-16">
-            <h2 class="font-serif text-4xl md:text-5xl mb-4 italic">Premium Treatment</h2>
-            <p class="text-gray-400 uppercase tracking-[0.3em] text-xs">Excellence in Medical Tourism</p>
+    <section id="services" class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-serif text-4xl mb-2 italic">Our Specialist Services</h2>
+            <p class="text-amber-600 text-xs font-bold tracking-[0.3em] uppercase">Premium Care in Vietnam</p>
         </div>
-
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-all">
-                <div class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="ri-tooth-line text-3xl text-amber-600"></i>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="p-8 rounded-[2rem] border border-gray-100 shadow-xl hover:-translate-y-2 transition-all">
+                <i class="ri-tooth-line text-4xl text-amber-600 mb-6 block"></i>
                 <h3 class="font-serif text-xl mb-3">Implant All-on-4/6</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Full arch restoration with premium titanium implants. Lifetime warranty.</p>
+                <p class="text-gray-500 text-sm">Full restoration with international standards.</p>
             </div>
-            <div class="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-all">
-                <div class="w-16 h-16 bg-pink-50 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="ri-parent-line text-3xl text-pink-500"></i>
-                </div>
-                <h3 class="font-serif text-xl mb-3">Maternity in VN</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">5-star luxury birth packages with world-class neonatal care experts.</p>
+            <div class="p-8 rounded-[2rem] border border-gray-100 shadow-xl hover:-translate-y-2 transition-all">
+                <i class="ri-parent-line text-4xl text-pink-500 mb-6 block"></i>
+                <h3 class="font-serif text-xl mb-3">Maternity Tourism</h3>
+                <p class="text-gray-500 text-sm">5-star luxury birth packages in Vietnam.</p>
             </div>
-            <div class="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-all">
-                <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="ri-eye-line text-3xl text-blue-500"></i>
-                </div>
+            <div class="p-8 rounded-[2rem] border border-gray-100 shadow-xl hover:-translate-y-2 transition-all">
+                <i class="ri-eye-line text-4xl text-blue-500 mb-6 block"></i>
                 <h3 class="font-serif text-xl mb-3">Lasik Surgery</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Advanced laser vision correction. Painless 15-min procedure.</p>
+                <p class="text-gray-500 text-sm">Advanced laser eye correction technology.</p>
             </div>
-            <div class="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-all">
-                <div class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="ri-microscope-line text-3xl text-purple-500"></i>
-                </div>
+            <div class="p-8 rounded-[2rem] border border-gray-100 shadow-xl hover:-translate-y-2 transition-all">
+                <i class="ri-microscope-line text-4xl text-purple-500 mb-6 block"></i>
                 <h3 class="font-serif text-xl mb-3">IVF Success</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Highest success rates in SE Asia. Genetic screening included.</p>
+                <p class="text-gray-500 text-sm">Highest success rates with expert geneticists.</p>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-end mb-10">
-            <div>
-                <h2 class="font-serif text-3xl italic">Transformations</h2>
-                <p class="text-gray-400 text-sm">Real results from our global patients</p>
-            </div>
-            <div class="flex gap-2">
-                <button onclick="document.getElementById('ba-slider').scrollBy({left: -300, behavior: 'smooth'})" class="p-3 rounded-full border border-gray-200 hover:bg-gray-50"><i class="ri-arrow-left-s-line"></i></button>
-                <button onclick="document.getElementById('ba-slider').scrollBy({left: 300, behavior: 'smooth'})" class="p-3 rounded-full bg-amber-600 text-white shadow-lg"><i class="ri-arrow-right-s-line"></i></button>
-            </div>
-        </div>
-        
-        <div id="ba-slider" class="flex overflow-x-auto gap-6 px-6 no-scrollbar snap-x">
-            <div class="before-after-card snap-start rounded-[2rem] overflow-hidden border-4 border-gray-50 shadow-lg">
-                <img src="images/ba1.jpg" class="w-full h-64 object-cover" alt="Result 1">
-                <div class="p-4 bg-white text-center font-bold text-xs uppercase text-amber-600">Dental All-on-4</div>
-            </div>
-            <div class="before-after-card snap-start rounded-[2rem] overflow-hidden border-4 border-gray-50 shadow-lg">
-                <img src="images/ba2.jpg" class="w-full h-64 object-cover" alt="Result 2">
-                <div class="p-4 bg-white text-center font-bold text-xs uppercase text-amber-600">IVF Success</div>
+    <section class="py-20 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-10"><h2 class="font-serif text-3xl italic">Transformations</h2></div>
+        <div class="flex overflow-x-auto gap-6 px-6 no-scrollbar snap-x">
+            <div class="min-w-[300px] snap-start rounded-3xl overflow-hidden shadow-lg bg-white p-2">
+                <img src="images/ba1.jpg" class="w-full h-64 object-cover rounded-2xl mb-4" alt="Before After">
+                <p class="text-center text-xs font-bold text-amber-700 uppercase pb-2">Dental Implant Result</p>
             </div>
             </div>
     </section>
 
-    <section class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-6 mb-12 text-center">
-            <h2 class="font-serif text-3xl mb-2 italic">Patient Stories</h2>
-            <p class="text-gray-400 text-sm uppercase">1500+ Happy Travelers</p>
+    <footer class="bg-white py-16 border-t border-gray-100 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <img src="images/logo.png" class="h-10 mx-auto mb-10" alt="Logo">
+            <div class="flex justify-center gap-8 mb-10 text-2xl text-gray-400">
+                <a href="https://facebook.com/Esculape.Vietnamdental/" target="_blank" class="hover:text-amber-600"><i class="ri-facebook-fill"></i></a>
+                <a href="https://instagram.com/vietnam_dental_tourism_/" target="_blank" class="hover:text-amber-600"><i class="ri-instagram-line"></i></a>
+                <a href="https://youtube.com/@DentalEsculape" target="_blank" class="hover:text-amber-600"><i class="ri-youtube-fill"></i></a>
+                <a href="https://linkedin.com/company/esculape-vietnam-dental-tourism/" target="_blank" class="hover:text-amber-600"><i class="ri-linkedin-fill"></i></a>
+            </div>
+            <p class="text-gray-400 text-[10px] tracking-[0.3em] uppercase">© 2026 ESCULAPE Vietnam Medical Tourism</p>
         </div>
-        <div class="flex overflow-x-auto gap-6 px-6 no-scrollbar snap-x pb-10">
-            <div class="review-card bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100">
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center font-bold text-amber-700">JS</div>
-                    <div>
-                        <p class="text-sm font-bold flex items-center gap-1">James S. <i class="ri-checkbox-circle-fill text-blue-500"></i></p>
-                        <p class="text-[10px] text-gray-400">Verified Patient - Australia</p>
-                    </div>
-                </div>
-                <div class="flex text-amber-400 mb-3"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
-                <p class="text-sm text-gray-600 italic">"Omg, the All-on-4 here is legit. Saved like 60% vs Sydney clinics. Staff are super friendly. 10/10 rec!"</p>
-            </div>
-            <div class="review-card bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100">
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center font-bold text-purple-700">AM</div>
-                    <div>
-                        <p class="text-sm font-bold flex items-center gap-1">Anna M. <i class="ri-checkbox-circle-fill text-blue-500"></i></p>
-                        <p class="text-[10px] text-gray-400">Verified Patient - Germany</p>
-                    </div>
-                </div>
-                <div class="flex text-amber-400 mb-3"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
-                <p class="text-sm text-gray-600 italic">"IVF process was stressful but Esculape made it thru. Dr. was amazing. Highly recommend for DE travelers."</p>
-            </div>
-            </div>
-    </section>
+    </footer>
 
-    <div id="main-popup" class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-black/70 backdrop-blur-md px-4">
-        <div class="bg-white rounded-[3rem] max-w-2xl w-full p-8 md:p-12 relative shadow-2xl overflow-y-auto max-h-[90vh]">
-            <button onclick="closePopup()" class="absolute top-8 right-8 text-gray-400 hover:text-amber-600 transition-colors">
-                <i class="ri-close-line text-3xl"></i>
-            </button>
+    <a href="https://wa.me/84396138466" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform">
+        <i class="ri-whatsapp-line"></i>
+    </a>
 
-            <div class="text-center mb-8">
-                <img src="images/logo.png" class="h-10 mx-auto mb-4" alt="Logo">
-                <h3 class="text-3xl font-serif font-bold text-gray-800">Premium Booking</h3>
-                <p class="text-gray-400 text-sm italic">Direct reply to Esculapedental@gmail.com</p>
-            </div>
-
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <input type="text" name="name" required placeholder="Full Name" class="w-full px-6 py-4 rounded-2xl bg-gray-50 border border-gray-100 outline-none focus:border-amber-500">
-                <input type="text" name="country" required placeholder="Country" class="w-full px-
+    <div id="main-popup" class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+        <div class="bg-white rounded-[2.5rem] max-w-2xl w-full p-10 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+            <button onclick="closePopup()" class="absolute top-6 right-6 text
