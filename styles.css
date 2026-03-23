@@ -81,6 +81,6 @@ iframe {
 
 /* POPUP ANIMATION */
 #main-popup {
-    opacity: 0;
+    opacity: 1 !important; /* Mình tạm sửa thành 1 để đảm bảo nó hiện ra */
     transition: opacity 0.3s ease;
 }
