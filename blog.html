@@ -3,63 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Dental Tourism Experience in Vietnam | ESCULAPE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Dental Tips - Why Vietnam is the Top Destination | ESCULAPE</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
-    <link rel="stylesheet" href="styles.css"> </head>
-<body class="bg-white">
+    <link rel="stylesheet" href="styles.css">
 
-    <nav class="bg-white border-b border-gray-100 py-4 px-6 sticky top-0 z-50">
-        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-            <a href="index.html"><img src="images/logo.png" class="h-10" alt="Logo"></a>
-            <a href="index.html" class="text-sm font-semibold text-amber-700">← Back to Home</a>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fafafa; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .blog-content p { margin-bottom: 1.5rem; line-height: 1.8; color: #4b5563; }
+        .gold-border { border-left: 4px solid #D4AF37; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html"><img src="images/logo.png" class="h-8" alt="Logo"></a>
+            <a href="index.html" class="text-xs font-bold uppercase tracking-widest text-amber-700 hover:text-amber-500 transition-colors">
+                <i class="ri-arrow-left-line"></i> Back to Home
+            </a>
         </div>
     </nav>
 
-    <main class="max-w-screen-md mx-auto py-16 px-6">
-        <article>
-            <header class="text-center mb-12">
-                <span class="text-amber-600 font-semibold tracking-widest text-xs uppercase">Dental Tips</span>
-                <h1 class="text-4xl md:text-5xl font-serif font-bold mt-4 mb-6 text-gray-900 leading-tight">
-                    Why Vietnam is the Top Destination for Dental Tourism in 2024
-                </h1>
-                <p class="text-gray-400 text-sm">Published on March 24, 2024 • By Dr. Esculape Team</p>
-            </header>
+    <article class="max-w-3xl mx-auto px-6 py-16">
+        <header class="text-center mb-12">
+            <span class="text-amber-600 text-xs font-bold uppercase tracking-[0.3em] mb-4 block">Dental Tips</span>
+            <h1 class="font-serif text-4xl md:text-5xl text-gray-900 leading-tight mb-6">Why Vietnam is the Top Destination for Dental Tourism in 2024</h1>
+            <div class="flex items-center justify-center gap-4 text-gray-400 text-sm">
+                <span>March 24, 2026</span>
+                <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                <span>By Dr. Esculape Team</span>
+            </div>
+        </header>
 
-            <div class="rounded-[2rem] overflow-hidden mb-12 shadow-xl">
-                <img src="images/blog-hero.jpg" alt="Dental Tourism Vietnam" class="w-full h-auto">
+        <div class="rounded-[2rem] overflow-hidden shadow-2xl mb-12">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2000&auto=format&fit=crop" class="w-full h-[400px] object-cover" alt="Modern Dental Clinic">
+        </div>
+
+        <div class="blog-content text-lg">
+            <p class="text-xl text-gray-600 leading-relaxed mb-8 first-letter:text-5xl first-letter:font-serif first-letter:text-amber-600 first-letter:mr-3 first-letter:float-left">
+                Vietnam has emerged as a global leader in dental tourism, offering a perfect blend of high-quality clinical care and breathtaking travel experiences...
+            </p>
+
+            <h2 class="font-serif text-2xl text-gray-800 mt-10 mb-4">1. World-Class Dental Technology</h2>
+            <p>Leading clinics in Vietnam, like Esculape, are equipped with the latest dental technology from Europe and the USA, including 3D CT scans, digital impressions, and laser dentistry.</p>
+
+            <div class="gold-border text-gray-700">
+                "Our mission is to provide international patients with the same quality of care they expect at home, but at a fraction of the cost."
             </div>
 
-            <div class="prose prose-amber max-w-none text-gray-700 leading-relaxed space-y-6 text-lg">
-                <p>
-                    Vietnam has emerged as a global leader in dental tourism, offering a perfect blend of high-quality clinical care and breathtaking travel experiences...
-                </p>
-                
-                <h2 class="text-2xl font-serif font-bold text-gray-800 mt-10">1. World-Class Dental Technology</h2>
-                <p>
-                    Leading clinics in Vietnam, like Esculape, are equipped with the latest dental technology from Europe and the USA, including 3D CT scans, digital impressions...
-                </p>
+            <h2 class="font-serif text-2xl text-gray-800 mt-10 mb-4">2. Significant Cost Savings</h2>
+            <p>Patients can save up to 70% on major procedures like dental implants or porcelain veneers compared to the USA, Australia, or Europe without compromising on quality.</p>
+        </div>
 
-                <blockquote class="border-l-4 border-amber-500 pl-6 italic text-gray-600 my-8">
-                    "Our mission is to provide international patients with the same quality of care they expect at home, but at a fraction of the cost."
-                </blockquote>
+        <div class="mt-16 p-10 rounded-[2.5rem] bg-gradient-to-br from-amber-50 to-orange-50 text-center border border-amber-100">
+            <h3 class="font-serif text-2xl mb-4">Ready for your transformation?</h3>
+            <p class="text-gray-600 mb-8">Get a free digital consultation and a detailed treatment plan today.</p>
+            <button onclick="window.location.href='index.html'" class="btn-primary px-10 py-4 rounded-full font-bold text-white uppercase tracking-widest text-sm shadow-xl">
+                Contact Us Now
+            </button>
+        </div>
+    </article>
 
-                <h2 class="text-2xl font-serif font-bold text-gray-800 mt-10">2. Significant Cost Savings</h2>
-                <p>
-                    Patients can save up to 70% on major procedures like dental implants or porcelain veneers compared to the USA, Australia, or Europe.
-                </p>
-            </div>
-
-            <div class="mt-16 p-10 bg-gray-50 rounded-[2rem] text-center border border-amber-100">
-                <h3 class="text-2xl font-serif font-bold mb-4">Ready for your transformation?</h3>
-                <p class="mb-8 text-gray-600">Get a free digital consultation and a detailed treatment plan today.</p>
-                <a href="index.html" class="btn-primary px-10 py-4 rounded-2xl font-bold inline-block">CONTACT US NOW</a>
-            </div>
-        </article>
-    </main>
-
-    <footer class="bg-white py-12 border-t border-gray-100 text-center text-gray-400 text-xs">
-        <p>© 2024 ESCULAPE Vietnam Dental Tourism</p>
+    <footer class="py-10 text-center text-gray-400 text-xs tracking-widest uppercase">
+        © 2024 ESCULAPE Vietnam Dental Tourism
     </footer>
 
 </body>
